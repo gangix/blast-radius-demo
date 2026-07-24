@@ -24,6 +24,5 @@ select
     line_total,
     discount_amount,
     discount_percent,
-    gift_wrap,
     updated_at
 from {{ ref('raw_order_details') }}

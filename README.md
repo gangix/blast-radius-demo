@@ -1,7 +1,7 @@
 # Blast Radius — Demo Data Repo
 
 This is a tiny **dbt project** wired to the
-[Blast Radius](https://github.com/OWNER/blast-radius) GitHub Action. It exists so
+[Blast Radius](https://github.com/gangix/blast-radius) GitHub Action. It exists so
 you can **open a pull request and watch the bot review it** — the same way a data
 team would.
 
@@ -38,9 +38,9 @@ dbt_project.yml
 
 The workflow is ready but needs two things before it runs live:
 
-1. **Publish the Action.** Point `uses: OWNER/blast-radius@v1` in
+1. **Publish the Action.** Point `uses: gangix/blast-radius@v1` in
    `.github/workflows/blast-radius.yml` at the published
-   [Blast Radius](https://github.com/OWNER/blast-radius) action repo.
+   [Blast Radius](https://github.com/gangix/blast-radius) action repo.
 2. **Give it a reachable DataHub.** Add repository secrets:
    - `DATAHUB_GMS_URL` — a DataHub GMS reachable **from the GitHub runner** (a
      hosted instance, or your local one exposed via a tunnel / self-hosted
@@ -55,6 +55,6 @@ required status check in branch protection.
 ## Reproduce the verdicts locally
 
 Every verdict here was verified end-to-end against the seeded DataHub. With the
-[Blast Radius](https://github.com/OWNER/blast-radius) package installed and
+[Blast Radius](https://github.com/gangix/blast-radius) package installed and
 DataHub running, the three diffs above resolve to ❌ / ⚠️ / ✅ deterministically —
 no LLM decides severity; the graph facts come from DataHub.

@@ -12,7 +12,7 @@ jobs:
     steps:
       # Replace OWNER with the account/org where you published the Blast Radius
       # action repo (e.g. your-org/blast-radius). Pin to a tag or SHA in real use.
-      - uses: OWNER/blast-radius@v1
+      - uses: gangix/blast-radius@v1
         with:
           # Must be a DataHub reachable from the GitHub runner (a hosted instance,
           # or your local one exposed via a tunnel / self-hosted runner — the cloud

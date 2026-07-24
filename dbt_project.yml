@@ -1,0 +1,12 @@
+name: blast_radius_demo
+version: "1.0.0"
+config-version: 2
+profile: blast_radius_demo
+
+model-paths: ["models"]
+
+models:
+  blast_radius_demo:
+    +materialized: view
+    order_details:
+      +materialized: table

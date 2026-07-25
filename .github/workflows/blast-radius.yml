@@ -20,3 +20,7 @@ jobs:
           datahub-token:   ${{ secrets.DATAHUB_TOKEN }}
           # DataHub frontend URL, so asset links in the comment are clickable.
           link-base:       ${{ secrets.DATAHUB_FRONTEND_URL }}
+          # Contribute the verdict back to DataHub: a knowledge doc + a governance
+          # tag on the affected column (needs a write-scoped token; local quickstart
+          # has auth off, so it just works).
+          write-back:      "true"

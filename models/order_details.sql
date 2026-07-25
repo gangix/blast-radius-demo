@@ -22,7 +22,6 @@ select
     unit_price,
     quantity,
     line_total,
-    discount_amount,
     discount_percent,
     gift_wrap,
     updated_at

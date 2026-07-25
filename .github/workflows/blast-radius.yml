@@ -8,13 +8,14 @@ permissions:
 
 jobs:
   blast-radius:
-    runs-on: self-hosted   # runs on your machine, so it can reach localhost DataHub
+    runs-on: ubuntu-latest
     steps:
       # Pin to a tag or commit SHA in real use (here @v1, a moving major tag).
       - uses: gangix/blast-radius@v1
         with:
-          # DataHub reachable from the runner. With a self-hosted runner this is
-          # your local http://localhost:8080 — set it as the DATAHUB_GMS_URL secret.
+          # DataHub reachable from the GitHub runner. Local DataHub? Expose it with
+          # a tunnel (cloudflared tunnel --url http://localhost:8080) and put that
+          # https URL in the DATAHUB_GMS_URL secret.
           datahub-gms-url: ${{ secrets.DATAHUB_GMS_URL }}
           datahub-token:   ${{ secrets.DATAHUB_TOKEN }}
           # DataHub frontend URL, so asset links in the comment are clickable.

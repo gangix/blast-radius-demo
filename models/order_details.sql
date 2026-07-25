@@ -15,7 +15,6 @@ select
     customer_id,
     cust_email,
     warehouse_id,
-    warehouse_name,
     promotion_name,
     product_id,
     product_name,

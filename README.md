@@ -9,6 +9,12 @@ Every PR here changes one column of the `order_details` model. On each PR the
 Action asks DataHub *what breaks downstream and who actually queries this*, then
 posts a blast-radius comment and a **Blast Radius** check — before anyone merges.
 
+> **👀 Judges:** the three open PRs below already show Blast Radius's live verdicts
+> (❌ / ⚠️ / ✅) — just open a PR and read the comment; nothing needs to be running.
+> To reproduce a *fresh* run, DataHub must be reachable from the GitHub runner (see
+> setup below) — the maintainer's local instance isn't kept online 24/7, so a new PR
+> opened while it's offline will show a "couldn't reach DataHub" notice instead.
+
 ## The three scenarios
 
 Open any of these as a PR (`compare` → **Create pull request**) and watch the
